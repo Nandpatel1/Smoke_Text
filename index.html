@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smoke Text</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section>
+        <h1> Hover here to see SMOKE EFFECT </h1>
+        <p class="text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, laborum sapiente iste officia error harum delectus recusandae. Officiis dicta expedita harum provident alias maxime atque numquam exercitationem ex molestiae magnam, tenetur nihil quod explicabo blanditiis quis tempora accusamus dignissimos libero omnis magni totam, esse accusantium. Tenetur magnam quidem sit excepturi.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, reiciendis ratione! Laudantium sunt veritatis provident nesciunt aut animi placeat numquam.
+        </p>
+    </section>
+
+    <script>
+        const txt = document.querySelector('h1');
+        txt.innerHTML = txt.textContent.replace(/\S/g, "<span>$&</span>")
+
+        const ltrs = document.querySelectorAll('span');
+        for(let i = 0; i < ltrs.length; i++){
+            ltrs[i].addEventListener('mouseover', function(){
+                ltrs[i].classList.add('active');
+            })
+        }
+
+        const text = document.querySelector('.text');
+        text.innerHTML = text.textContent.replace(/\S/g,"<span>$&</span>")
+
+
+        const letters = document.querySelectorAll('span');
+        for(let i = 0; i < letters.length; i++){
+            letters[i].addEventListener('mouseover', function(){
+                letters[i].classList.add('active');
+            })
+        }
+    </script>
+</body>
+
+</html>
